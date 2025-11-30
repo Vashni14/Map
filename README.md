@@ -1,55 +1,47 @@
-🗺️ AOI Map Application - Area of Interest Mapping Tool
+# 🗺️ AOI Map Application - Area of Interest Mapping Tool
+
 A modern, interactive web application for defining and managing geographic Areas of Interest (AOI) with advanced mapping capabilities.
 
-https://img.shields.io/badge/React-18.2.0-blue https://img.shields.io/badge/TypeScript-5.0+-blue https://img.shields.io/badge/OpenLayers-8.2.0-green https://img.shields.io/badge/TailwindCSS-3.3+-blue
+![React](https://img.shields.io/badge/React-18.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue) ![OpenLayers](https://img.shields.io/badge/OpenLayers-8.2.0-green) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3+-blue)
 
-✨ Features
-🗺️ Core Mapping
-Interactive Map Interface - Powered by OpenLayers with multiple base layers
+## ✨ Features
 
-Multiple Base Layers - OSM, ESRI Satellite, WMS NRW Satellite
+### 🗺️ Core Mapping
+- **Interactive Map Interface** - Powered by OpenLayers with multiple base layers
+- **Multiple Base Layers** - OSM, ESRI Satellite, WMS NRW Satellite
+- **Real-time Drawing** - Draw polygons directly on the map
+- **Precise Coordinate Handling** - Accurate lat/lon coordinate management
 
-Real-time Drawing - Draw polygons directly on the map
+### 🎯 Area Management
+- **Create Areas** - Draw custom polygons on the map
+- **Edit Boundaries** - Adjust area edges with vertex editing
+- **Delete Areas** - Remove areas with erase mode or sidebar controls
+- **Toggle Visibility** - Show/hide areas on the map
+- **View All Areas** - Auto-zoom to display all created areas
 
-Precise Coordinate Handling - Accurate lat/lon coordinate management
+### 🔍 Search & Navigation
+- **Geocoding Search** - Find locations using Nominatim API
+- **Indian Cities Support** - Optimized for Indian geography with major metro cities
+- **Smart Zoom Controls** - Zoom in/out, reset view, fit to areas
 
-🎯 Area Management
-Create Areas - Draw custom polygons on the map
+### 💾 Data Persistence
+- **Local Storage** - Automatically saves areas between sessions
+- **Project Scope Management** - Define complete project requirements
+- **Export Ready** - Structured data for further processing
 
-Edit Boundaries - Adjust area edges with vertex editing
+## 🚀 Quick Start
 
-Delete Areas - Remove areas with erase mode or sidebar controls
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
 
-Toggle Visibility - Show/hide areas on the map
+### Installation
 
-View All Areas - Auto-zoom to display all created areas
-
-🔍 Search & Navigation
-Geocoding Search - Find locations using Nominatim API
-
-Indian Cities Support - Optimized for Indian geography with major metro cities
-
-Smart Zoom Controls - Zoom in/out, reset view, fit to areas
-
-💾 Data Persistence
-Local Storage - Automatically saves areas between sessions
-
-Project Scope Management - Define complete project requirements
-
-Export Ready - Structured data for further processing
-
-🚀 Quick Start
-Prerequisites
-Node.js 16+
-
-npm or yarn
-
-Installation
-Clone the repository
-
-bash
+1. **Clone the repository**
+```bash
 git clone <repository-url>
 cd aoi-map-app
+
 Install dependencies
 
 bash
@@ -179,109 +171,3 @@ Test Coverage
 ✅ Responsive design testing
 
 ✅ Error handling scenarios
-
-⚙️ Configuration
-Environment Variables
-Create .env file for custom configuration:
-
-env
-VITE_MAP_DEFAULT_CENTER=28.6139,77.2090
-VITE_MAP_DEFAULT_ZOOM=10
-VITE_SEARCH_API_URL=https://nominatim.openstreetmap.org/search
-Customizing Base Layers
-Modify the layer configuration in App.tsx:
-
-typescript
-const baseLayers = {
-  osm: 'OpenStreetMap',
-  satellite: 'ESRI World Imagery', 
-  wms: 'WMS NRW Satellite'
-};
-🎨 Customization
-Adding New Base Layers
-typescript
-const newLayer = new ol.layer.Tile({
-  source: new ol.source.XYZ({
-    url: 'your-tile-service-url/{z}/{x}/{y}'
-  }),
-  visible: false
-});
-Styling Areas
-Modify the vector layer style function:
-
-typescript
-style: function(feature) {
-  const isEditing = feature.get('areaId') === editingAreaId;
-  return new ol.style.Style({
-    fill: new ol.style.Fill({
-      color: isEditing ? 'rgba(59, 130, 246, 0.4)' : 'rgba(249, 115, 22, 0.3)'
-    }),
-    stroke: new ol.style.Stroke({
-      color: isEditing ? '#3b82f6' : '#f97316',
-      width: isEditing ? 4 : 3
-    })
-  });
-}
-🔧 API Reference
-Geocoding API
-typescript
-// Search for locations
-const response = await fetch(
-  `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`
-);
-Local Storage Schema
-typescript
-interface StoredAreas {
-  areas: Array<{
-    id: number;
-    name: string;
-    coordinates: [number, number][]; // [lat, lon]
-    visible: boolean;
-    color: string;
-  }>;
-}
-🐛 Troubleshooting
-Common Issues
-Map not loading
-
-Check internet connection
-
-Verify OpenLayers script loading
-
-Check browser console for errors
-
-Search not working
-
-Verify Nominatim API accessibility
-
-Check network requests in dev tools
-
-Areas not saving
-
-Check browser localStorage support
-
-Verify no storage quotas exceeded
-
-Debug Mode
-Enable debug logging in browser console:
-
-javascript
-localStorage.setItem('debug', 'true');
-📊 Performance
-Optimizations
-Efficient Re-renders - React memo and callback optimization
-
-Map Performance - Vector layer clustering and simplification
-
-Memory Management - Proper cleanup of OpenLayers interactions
-
-Lazy Loading - Dynamic imports for larger components
-
-Browser Support
-Chrome 90+
-
-Firefox 88+
-
-Safari 14+
-
-Edge 90+
