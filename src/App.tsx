@@ -448,7 +448,7 @@ export default function AOIMapApp() {
       showNotification('Drawing cancelled');
     });
 
-    map.addInteraction(ddraw);
+    map.addInteraction(draw);
     drawInteractionRef.current = draw;
 
     showNotification('Click to start drawing, drag to create polygon, double-click to finish');
