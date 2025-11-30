@@ -1,47 +1,55 @@
-# 🗺️ AOI Map Application - Area of Interest Mapping Tool
-
+🗺️ AOI Map Application - Area of Interest Mapping Tool
 A modern, interactive web application for defining and managing geographic Areas of Interest (AOI) with advanced mapping capabilities.
 
-![React](https://img.shields.io/badge/React-18.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue) ![OpenLayers](https://img.shields.io/badge/OpenLayers-8.2.0-green) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3+-blue)
+https://img.shields.io/badge/React-18.2.0-blue https://img.shields.io/badge/TypeScript-5.0+-blue https://img.shields.io/badge/OpenLayers-8.2.0-green https://img.shields.io/badge/TailwindCSS-3.3+-blue
 
-## ✨ Features
+✨ Features
+🗺️ Core Mapping
+Interactive Map Interface - Powered by OpenLayers with multiple base layers
 
-### 🗺️ Core Mapping
-- **Interactive Map Interface** - Powered by OpenLayers with multiple base layers
-- **Multiple Base Layers** - OSM, ESRI Satellite, WMS NRW Satellite
-- **Real-time Drawing** - Draw polygons directly on the map
-- **Precise Coordinate Handling** - Accurate lat/lon coordinate management
+Multiple Base Layers - OSM, ESRI Satellite, WMS NRW Satellite
 
-### 🎯 Area Management
-- **Create Areas** - Draw custom polygons on the map
-- **Edit Boundaries** - Adjust area edges with vertex editing
-- **Delete Areas** - Remove areas with erase mode or sidebar controls
-- **Toggle Visibility** - Show/hide areas on the map
-- **View All Areas** - Auto-zoom to display all created areas
+Real-time Drawing - Draw polygons directly on the map
 
-### 🔍 Search & Navigation
-- **Geocoding Search** - Find locations using Nominatim API
-- **Indian Cities Support** - Optimized for Indian geography with major metro cities
-- **Smart Zoom Controls** - Zoom in/out, reset view, fit to areas
+Precise Coordinate Handling - Accurate lat/lon coordinate management
 
-### 💾 Data Persistence
-- **Local Storage** - Automatically saves areas between sessions
-- **Project Scope Management** - Define complete project requirements
-- **Export Ready** - Structured data for further processing
+🎯 Area Management
+Create Areas - Draw custom polygons on the map
 
-## 🚀 Quick Start
+Edit Boundaries - Adjust area edges with vertex editing
 
-### Prerequisites
-- Node.js 16+ 
-- npm or yarn
+Delete Areas - Remove areas with erase mode or sidebar controls
 
-### Installation
+Toggle Visibility - Show/hide areas on the map
 
-1. **Clone the repository**
-```bash
+View All Areas - Auto-zoom to display all created areas
+
+🔍 Search & Navigation
+Geocoding Search - Find locations using Nominatim API
+
+Indian Cities Support - Optimized for Indian geography with major metro cities
+
+Smart Zoom Controls - Zoom in/out, reset view, fit to areas
+
+💾 Data Persistence
+Local Storage - Automatically saves areas between sessions
+
+Project Scope Management - Define complete project requirements
+
+Export Ready - Structured data for further processing
+
+🚀 Quick Start
+Prerequisites
+Node.js 16+
+
+npm or yarn
+
+Installation
+Clone the repository
+
+bash
 git clone <repository-url>
 cd aoi-map-app
-
 Install dependencies
 
 bash
